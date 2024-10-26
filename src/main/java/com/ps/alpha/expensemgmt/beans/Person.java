@@ -1,5 +1,6 @@
 package com.ps.alpha.expensemgmt.beans;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,6 +19,7 @@ public class Person {
     private String passwordHash;
     private LocalDateTime createdAt;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Expense> expense;
 }
