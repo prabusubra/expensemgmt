@@ -18,6 +18,6 @@ public class Person {
     private String passwordHash;
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Expense> expense;
 }
