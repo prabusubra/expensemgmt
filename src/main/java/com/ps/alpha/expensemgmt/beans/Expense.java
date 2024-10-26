@@ -21,7 +21,6 @@ public class Expense {
 
     @ManyToOne
     private Category category;
-    private String type; //todo: enum
     private int frequency;
     private LocalDateTime createdAt;
     private boolean isRecurring;
